@@ -99,19 +99,8 @@ body {
     height: auto;
     width: 30%;
     position: fixed; 
-    bottom: 10%;
-    right: 35%;
-    animation: openwebname 3s ease-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-@keyframes openwebname {
-    0% {
-        bottom: 50%;
-    }
-    100% {
-        bottom: 10%;
-    }
+    bottom: 10vh;
+    right: 35vw;
 }
 /***************************************************************************** om ********/
 #om {
