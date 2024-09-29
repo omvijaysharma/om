@@ -111,14 +111,14 @@ let today = getCurrentDay();
 let modeColor = '#40ff63';
 let modeBorder = '#000';
 
-const backgroundVideo = document.querySelector('#backgroundVideo');
+const backgroundVideoDiv = document.querySelector('.backgroundVideoDiv');
 const defultMode = document.querySelector('#defaultmode');
 const modeBtn = document.querySelector('#mode');
 const videoLink = document.querySelector('#videolink');
 
 function mode() {
     
-    backgroundVideo.style.display = 'flex';
+    backgroundVideoDiv.style.display = 'flex';
     defultMode.style.display = 'flex';
     modeBtn.style.display = 'none';
     
@@ -135,7 +135,7 @@ function mode() {
 }
 
 function defaultmode() {
-    backgroundVideo.style.display = 'none';
+    backgroundVideoDiv.style.display = 'none';
     defultMode.style.display = 'none';
     modeBtn.style.display = 'flex';
  
@@ -149,4 +149,4 @@ function defaultmode() {
     });
     document.querySelector('.socialDiv a').style.background = 'transparent';
 }
-/* ====================================================== container background stars ===== */
+/* ======================================================================================= */
