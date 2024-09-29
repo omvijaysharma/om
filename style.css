@@ -44,15 +44,20 @@ body {
     padding: 0;
 }
 /**************************************************************** background video *******/
-#backgroundVideo {
-    position: absolute; /* Absolute position */
-    top: 0;
+.backgroundVideoDiv {
+    display: none;
+    background: #000;
+    position: absolute;
+    top: 50%;
     left: 0;
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    display: none;
+    transform: translateY(-50%);
+}
+#backgroundVideo {
+    width: 100vw;
 }
 #mode , #defaultmode {
     position: fixed;
