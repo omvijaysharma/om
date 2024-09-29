@@ -178,6 +178,9 @@ body {
     color: #fff;
     text-decoration: none;
 }
+.socialDiv a {
+    color: #fff;
+}
 .id-name-div {
     display: flex;
     flex-direction: column;
@@ -196,13 +199,6 @@ body {
     align-items: center;
     gap:10px;
 }
-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 .container button {
     gap:10px;
@@ -215,6 +211,7 @@ canvas {
     width: 100%;
     letter-spacing: 2px;
 }
+
 #crossContainerDivBtn {
     height: 50px;
     width: 50px;
