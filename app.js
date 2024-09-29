@@ -9,7 +9,6 @@ const crossBtn = document.querySelector("#crossBtn");
 
 function showpage() {
     socialDiv.style.display = 'flex';
-     socialDivI.classList.remove('fa-instagram', 'fa-github', 'fa-linkedin', 'fa-youtube', 'fa-pinterest', 'fa-twitter');
      crossBtn.style.animation = 'borderbigsmall 2s infinite';
 }
 function crosspage() {
@@ -24,14 +23,12 @@ function instagrampage() {
     idNameDivH4.innerText = '@om.vijay.sharma';
    
     showpage();
-    socialDivI.classList.add('fa-instagram');
 }
 function liteinstagrampage() {
     socialDivA.href = 'https://www.instagram.com/lite.edit?igsh=YzljYTk1ODg3Zg==';
     idNameDivH4.innerText = '@lite.edit';
    
     showpage();
-    socialDivI.classList.add('fa-instagram');
 }
 
 function githubpage() {
@@ -39,35 +36,30 @@ function githubpage() {
     idNameDivH4.innerText = '@omvijaysharma';
    
     showpage();
-    socialDivI.classList.add('fa-github');
 }
 function linkedinpage() {
     socialDivA.href = 'https://www.linkedin.com/in/vijay-sharma-a288a5312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app';
     idNameDivH4.innerText = '@vijaysharma';
    
     showpage();
-    socialDivI.classList.add('fa-linkedin');
 }
 function youtubepage() {
     socialDivA.href = 'https://youtube.com/@liteedit?si=geioZd7sp1wRs96I';
     idNameDivH4.innerText = '@lite.edit';
    
     showpage();
-    socialDivI.classList.add('fa-youtube');
 }
 function pinterestpage() {
     socialDivA.href = 'https://pin.it/5VpKP9z2e';
     idNameDivH4.innerText = '@liteedit';
    
     showpage();
-    socialDivI.classList.add('fa-pinterest');
 }
 function twitterpage() {
     socialDivA.href = 'https://x.com/omvijaysharma';
     idNameDivH4.innerText = '@omvijaysharma';
    
     showpage();
-    socialDivI.classList.add('fa-twitter');
 }
 /* ====================================================================== container ====== */
 const container = document.querySelector('.container');
@@ -117,7 +109,7 @@ function getCurrentDay() {
 let today = getCurrentDay();
 /* =============================================================== background video ====== */
 let modeColor = '#40ff63';
-let modeBorder = modeColor;
+let modeBorder = '#000';
 
 const backgroundVideo = document.querySelector('#backgroundVideo');
 const defultMode = document.querySelector('#defaultmode');
@@ -158,49 +150,3 @@ function defaultmode() {
     document.querySelector('.socialDiv a').style.background = 'transparent';
 }
 /* ====================================================== container background stars ===== */
-const canvas = document.getElementById('starCanvas');
-const ctx = canvas.getContext('2d');
-
-
-let stars = [];
-
-function createStars() {
-    for (let i = 0; i < 100; i++) { // Adjust number of stars as needed
-        stars.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            size: 1
-        });
-    }
-}
-
-function drawStars() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
-    ctx.fillStyle = 'white';
-
-    stars.forEach(star => {
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-        ctx.fill();
-    });
-}
-
-function updateStars() {
-    stars.forEach(star => {
-        star.x -= 1; // Move star to the left
-        if (star.x < 0) {
-            star.x = canvas.width; // Reset star to the right
-            star.y = Math.random() * canvas.height; // Randomize height
-        }
-    });
-}
-
-function animate() {
-    drawStars();
-    updateStars();
-    requestAnimationFrame(animate); // Repeat the animation
-}
-
-// Initialize stars and start animation
-createStars();
-animate();
