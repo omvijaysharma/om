@@ -5,6 +5,7 @@
     /* also use */
     margin: 0px;
     padding: 0px;
+    color: #fff;
     
     /* text copy,select na ho website par */
     /* For modern browsers */
@@ -20,14 +21,9 @@
     font-family: 'Games', sans-serif;
 }
 
-:root {
-    --text-color: #fff;
-}
-
 button {
     background: transparent;
     background: rgb(0,0,0,0.5);
-    color: #fff;
     border: 1px solid #fff;
 }
 button:hover {
@@ -63,14 +59,16 @@ body {
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background: #000;
-    color: var(--text-color);
+    background: transparent;
     padding: 15px;
+    font-size: 30px;
     border: none;
-    border-bottom: 1px solid #fff;
 }
 #defaultmode { 
     display: none; 
+}
+#starCanvas {
+    display: flex;
 }
 /******************************************************************* open website ********/
 .openWeb {
@@ -108,7 +106,6 @@ body {
     bottom: 2.5%;
     transform: translate(-50%, -2.5%);
     font-size: 30px;
-    color: #fff;
     width: 0%;
     text-align: center;
     position: absolute;
@@ -138,9 +135,14 @@ body {
     border-radius: 50%;
     font-size: 20px;
 }
+#mail {
+    border-radius: 0;
+    width: 80px;
+    border: none;
+    border-bottom: 5px solid;
+}
 #crossBtn {
     background: #555;
-    color: #fff;
     animation: none;
 }
 .socialDiv {
@@ -148,7 +150,6 @@ body {
     border-radius: 10px;
     width: 300px;
     height: 60px;
-    color: #fff;
     display: none;
     flex-direction: column;
     gap: 20px;
@@ -158,7 +159,7 @@ body {
     position: fixed;
     right: 7%;
     bottom: 30%;
-    letter-spacing: 3px;
+    letter-spacing: 3px; /* text letter spacing */
 }
 .socialDiv img {
     height: 100px;
@@ -169,11 +170,7 @@ body {
 }
 .socialDiv i {
     font-size: 50px;
-    color: #fff;
     text-decoration: none;
-}
-.socialDiv a {
-    color: #fff;
 }
 .id-name-div {
     display: flex;
@@ -255,7 +252,6 @@ body {
     overflow: hidden;
     background: transparent;
     background: rgb(0,0,0,0.5);
-    color: #fff;
     display: flex;
     align-content: center;
     align-items: center;
@@ -276,13 +272,13 @@ body {
     text-align: center;
     text-decoration: none;
     color: #000;
+    margin-bottom: 50px;
 }
 .gameContainer div h4,.websiteContainer div h4,.appContainer div h4, .otherContainer div h4 {
     border-bottom: 1px solid #fff;
     width: 80%;
     text-align: center; 
 }
-/*****************************************************************************************/
 
 /* Media query for portrait orientation (height > width) */
 @media only screen and (orientation: portrait) {
@@ -298,6 +294,11 @@ body {
 .socialDiv {
     width: 200px;
     right: 30%;
+}
+#mail { 
+    width: 40px;
+    border-right: none;
+    border-bottom: 1px solid #fff;
 }
 /********************************************************************** container ********/
 .container {
@@ -324,5 +325,8 @@ body {
 .gameContainer div,.websiteContainer div,.appContainer div, .otherContainer div {
     width: 90%;
     height: auto;
+}
+.gameContainer div a,.websiteContainer div a,.appContainer div a, .otherContainer div a {
+    margin-bottom: auto;
 }
     }
