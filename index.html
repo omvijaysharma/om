@@ -17,12 +17,16 @@
 
     <div class="openWeb"></div>
     
+<!------------------------------------------------------------------------------ stars -->
+    
+    <canvas id="starCanvas"></canvas>
+    
 <!----------------------------------------------------------------- vijay sharma image -->
 
     <img src="src/vijaysharma.png" id="name" alt="">
         
 <!--------------------------------------------------------------------------------- om -->
-
+      
       <h1 id="om">ओमः</h1>
  
 <!----------------------------------------------------------------- background video -->
@@ -37,21 +41,28 @@
 
 <!-- button -->
 
-<button id="mode" onclick="mode()">MODE</button>
-<button id="defaultmode" onclick="defaultmode()">DEFAULT</button>
+<button id="mode" onclick="mode()" class="fa fa-toggle-on"></button>
+<button id="defaultmode" onclick="defaultmode()" class="fa fa-toggle-off"></button>
 
 <!----------------------------------------------------------------- social page button -->
 
       <div class="socialBtnDiv">
+          <button onclick="sendEmail()" id="mail" class="fa fa-envelope" style="border-color: #0096ff"></button>
           
-          <button onclick="instagrampage()"<i class="fa fa-instagram"></i></button>
-          <button onclick="liteinstagrampage()"<i class="fa fa-instagram"> II</i></button>
-          <button onclick="githubpage()"><i class="fa fa-github"></i></button>
-          <button onclick="twitterpage()"><i class="fa fa-twitter">|X</i></button>
-          <button onclick="linkedinpage()"><i class="fa fa-linkedin"></i></button>
-          <button onclick="youtubepage()"><i class="fa fa-youtube"></i></button>
-          <button onclick="pinterestpage()"><i class="fa fa-pinterest"></i></button>
-          <button id="crossBtn" onclick="crosspage()"> × </button>
+          <button onclick="showpage('https://www.instagram.com/om.vijay.sharma?igsh=YzljYTk1ODg3Zg==','@om.vijay.sharma')"<i class="fa fa-instagram"></i></button>
+          
+          <button onclick="showpage('https://www.instagram.com/lite.edit?igsh=YzljYTk1ODg3Zg==','@lite.edit')"<i class="fa fa-instagram"> II</i></button>
+          
+          <button onclick="showpage('https://github.com/omvijaysharma','@omvijaysharma')"><i class="fa fa-github"></i></button>
+          
+          <button onclick="showpage('https://x.com/omvijaysharma','@omvijaysharma')"><i class="fa fa-twitter">|X</i></button>
+          
+          <button onclick="showpage('https://www.linkedin.com/in/vijay-sharma-a288a5312?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app','@vijaysharma')"><i class="fa fa-linkedin"></i></button>
+          
+          <button onclick="showpage('https://youtube.com/@liteedit?si=geioZd7sp1wRs96I','@lite.edit')"><i class="fa fa-youtube"></i></button>
+          
+          <button onclick="showpage('https://pin.it/5VpKP9z2e','@liteedit')"><i class="fa fa-pinterest"></i></button>
+          <button id="crossBtn" onclick="crosspage()" class="fa fa-close"></button>
           
       </div>
       
@@ -68,7 +79,7 @@
               </a>
           </div>
       </div>
-         
+
 <!-------------------------------------------------------------------------- container -->
 
       <div class="container">
@@ -79,11 +90,6 @@
     
 </div>
 
-<!---------------------------------------------------------------- cross all container -->
-      
-      <button id="crossContainerDivBtn" onclick="crossContainer()"> × </button>
-    
-             
 <!--------------------------------------------------------------------- game container -->
       
 <div class="gameContainer">
