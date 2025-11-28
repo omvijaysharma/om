@@ -1,0 +1,298 @@
+/* style.css */
+:root {
+    --primary-color: #111;
+    --secondary-color: #232323;
+    --accent-color: #ffb200;
+    --text-color: #fff;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --animated-bg: rgba(0,0,0,0.5); 
+    --font-main: 'Roboto', sans-serif;
+    --font-heading: 'Nura', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Nura';
+    src: url('Nura.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    background: var(--primary-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 1.2; 
+    font-weight: bold;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+}
+
+.header {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.header-content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.email-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease;
+    overflow: hidden;
+}
+
+.email-btn img {
+    height: 24px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.email-btn:hover img {
+    transform: scale(1.1);
+}
+
+.email-text {
+    max-width: 0;
+    opacity: 0;
+    transition: max-width 0.5s ease-in-out, opacity 0.3s ease-in-out; 
+    white-space: nowrap;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+.email-btn:hover .email-text {
+    max-width: 300px; 
+    opacity: 1;
+}
+@keyframes bg-loop {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* -------------------------------- */
+
+ .box {
+    background: var(--animated-bg);
+    border: 1px solid var(--border-color);
+    padding: 2rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-size: 400% 400%; 
+}
+
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+#profile-img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--accent-color);
+}
+
+.profile-details {
+    flex: 1;
+    min-width: 270px;
+}
+
+.subtitle {
+    font-weight: 500;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
+}
+
+.divider {
+    height: 2px;
+    background: var(--border-color);
+    margin: 1rem 0;
+    width: 100%;
+}
+
+blockquote,p {
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 3px solid var(--accent-color);
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+}
+.github-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.card label {
+    padding: 10rem 0;
+}
+
+.project-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-list a {
+    padding: 0.2rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.project-list a::before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+#github-snake {
+    width: 50%;
+    height: auto;
+}
+/* Social Links */
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.social-link {
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+.social-list img {
+    height: 30px;
+    width: 30px;
+}
+/* Footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0 2rem;
+    font-size: 0.9rem;
+}
+#github-botom {
+    width: 100vw;
+}
+.github-container img {
+    width: 49%;
+}
+
+@media screen and (orientation: portrait) {
+    #bg-video {
+        transform: translate(-50%, -50%) rotate(90deg);
+        width: 100vh;
+        height: 100vw;
+    }
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .divider {
+        margin: 1rem auto;
+        width: 80%;
+    }
+    .social-list {
+        flex-wrap: wrap;
+    }
+    .github-container {
+        flex-direction: column;
+    }
+
+    .email-btn {
+        padding: 0.5rem;
+    }
+    .email-btn:hover .email-text {
+        font-size: 0.8rem;
+    }
+.github-container img  {
+    width: 100%;
+}
+}
