@@ -195,7 +195,7 @@ blockquote,p {
 .github-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 .card label {
     padding: 10rem 0;
